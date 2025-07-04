@@ -1,0 +1,490 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-light: #E8DDCF;
+  --bg-dark: #5C3D30;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+  --button-border: #5C3D30;
+  --button-text-light: #E8DDCF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background-color: var(--bg-light);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--text-dark);
+}
+
+.logo-icon {
+  margin-right: 8px;
+  width: 100px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--bg-dark);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  border: 1px solid var(--bg-dark);
+}
+
+.btn-primary:hover {
+  background-color: #4a3026;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 80px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn-secondary {
+  background-color: var(--bg-dark);
+  color: var(--button-text-light);
+  border: 1px solid var(--button-text-light);
+  padding: 12px 25px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--button-text-light);
+  color: var(--bg-dark);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closet-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--bg-light);
+}
+
+.benefits-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: var(--text-dark);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  justify-content: center; 
+}
+
+.benefits-grid > :nth-child(4),
+.benefits-grid > :nth-child(5) {
+  grid-column: span 1;
+  justify-items: center;
+}
+
+.benefit-card {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card .icon-wrapper {
+  background-color: var(--bg-dark);
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefit-card .icon {
+  width: 48px;
+  height: 48px;
+  color: var(--text-light);
+}
+
+.benefit-card h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.benefit-card,
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.benefit-card:hover,
+.pricing-card:hover {
+  transform: translateY(-10px); /* se alza */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* sombra más profunda */
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--bg-light);
+}
+
+.pricing-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: var(--text-dark);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pricing-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.pricing-card .price span {
+  font-size: 0.5em;
+  font-weight: 400;
+  vertical-align: super;
+  margin-left: 5px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.pricing-card ul li .check-icon {
+  color: #4CAF50;
+  margin-right: 10px;
+  min-width: 20px;
+}
+
+.pricing-card ul li .cross-icon {
+  color: #F44336;
+  margin-right: 10px;
+  min-width: 20px;
+}
+
+.pricing-card ul li.crossed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.btn-subscribe {
+  background-color: var(--button-text-light);
+  color: var(--bg-dark);
+  border: 1px solid var(--button-text-light);
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.btn-subscribe:hover {
+  background-color: var(--bg-dark);
+  color: var(--button-text-light);
+}
+
+/* CTA Bottom Section */
+.cta-bottom-section {
+  background-color: var(--bg-light);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.cta-bottom-content p {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.btn-register {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  border: 1px solid var(--bg-dark);
+  padding: 15px 40px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.btn-register:hover {
+  background-color: #4a3026;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding-right: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
+
+  .benefits-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav a {
+    font-size: 1.1em;
+  }
+
+  .hero-section {
+    padding: 60px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .benefits-section,
+  .pricing-section,
+  .cta-bottom-section {
+    padding: 60px 0;
+  }
+
+  .benefits-section h2,
+  .pricing-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  .pricing-card {
+    padding: 30px;
+  }
+
+  .pricing-card .price {
+    font-size: 2.5em;
+  }
+
+  .cta-bottom-content p {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .logo span {
+    font-size: 1em;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-text p {
+    font-size: 0.9em;
+  }
+
+  .benefits-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.2em;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.5em;
+  }
+
+  .pricing-card .price {
+    font-size: 2em;
+  }
+
+  .pricing-card ul li {
+    font-size: 0.95em;
+  }
+
+  .btn-subscribe,
+  .btn-register {
+    font-size: 1em;
+    padding: 10px 25px;
+  }
+
+  .cta-bottom-content p {
+    font-size: 1.2em;
+  }
+}
