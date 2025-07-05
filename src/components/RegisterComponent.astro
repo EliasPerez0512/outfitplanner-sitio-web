@@ -1,0 +1,119 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Outfit Planner</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #E8DDCF; /* Dark brown background */
+            color: #333;
+        }
+
+        .register-container {
+            background-color: #E8DDCF; /* Creamy background */
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+
+        .icon {
+            margin-bottom: 20px;
+        }
+
+        .icon img {
+            width: 150px; /* Adjust size as needed */
+            height: 150px;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group input {
+            width: calc(100% - 80px);
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        button {
+            width: 80%;
+            padding: 12px;
+            background-color: #5C3D30; /* Medium brown button */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6B4F44; /* Slightly darker brown on hover */
+        }
+
+        .login-link {
+            margin-top: 25px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #5C3D30; /* Match button color for link */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="icon">
+            <img src="https://github.com/EliasPerez0512/Imagenes-Proyecto-DS9/blob/main/Logo.png?raw=true" alt="Outfit Planner Icon">
+        </div>
+        <h1>Unete a Outfit Planner</h1>
+        <form>
+            <div class="input-group">
+                <input type="text" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Correo electronico" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Contraseña" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Repetir contraseña" required>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p class="login-link">
+            Ya tienes una cuenta? <a href="/login">Haz clic aqui</a>
+        </p>
+    </div>
+</body>
+</html>

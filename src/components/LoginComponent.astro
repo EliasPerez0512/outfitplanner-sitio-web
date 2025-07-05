@@ -1,0 +1,142 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #E8DDCF;
+            padding: 20px; /* Add some padding around the whole page */
+            box-sizing: border-box;
+        }
+
+        .login-container {
+            background-color: #E8DDCF; /* Light beige background for the form */
+            border-radius: 15px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .icon {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #5C3D30; /* Dark brown text */
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .input-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: calc(100% - 40px); /* Account for padding */
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #5C3D30;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        .input-group input::placeholder {
+            color: #888;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 15px 20px;
+            background-color: #5C3D30; /* Dark brown button */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .login-button:hover {
+            background-color: #6B4F44; /* Slightly lighter brown on hover */
+        }
+
+        .links {
+            margin-top: 25px;
+            font-size: 0.95em;
+            color: #5C3D30; /* Dark brown text */
+        }
+
+        .links a {
+            color: #5C3D30; /* Dark brown link */
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .login-container {
+                padding: 30px 20px;
+                border-width: 5px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .input-group input,
+            .login-button {
+                padding: 12px 15px;
+                font-size: 0.95em;
+            }
+
+            .links {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://github.com/EliasPerez0512/Imagenes-Proyecto-DS9/blob/main/Logo.png?raw=true" alt="Icono" class="icon" />
+        <h1>Iniciar Sesión</h1>
+        <form>
+            <div class="input-group">
+                <input type="email" placeholder="Correo" required />
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Contraseña" required />
+            </div>
+            <button type="submit" class="login-button">Iniciar Sesión</button>
+        </form>
+        <div class="links">
+            <a href="#">¿Olvidó su contraseña?</a>
+            <a href="/register">No tienes cuenta? Haz clic aqui</a>
+        </div>
+    </div>
+</body>
+</html>
