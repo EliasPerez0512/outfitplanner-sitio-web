@@ -35,8 +35,8 @@ body {
 /* Header */
 .header {
   background-color: var(--bg-light);
-  padding: 15px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 130px;
 }
 
 .header-content {
@@ -55,7 +55,7 @@ body {
 
 .logo-icon {
   margin-right: 8px;
-  width: 100px;
+  width: 130px;
 }
 
 .nav ul {
