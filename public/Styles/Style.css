@@ -385,13 +385,11 @@ body {
 
 @media (max-width: 768px) {
   .header-content {
-    flex-direction: column;
     gap: 20px;
   }
 
   .nav ul {
-    flex-direction: column;
-    gap: 15px;
+    display: none;
   }
 
   .nav a {
